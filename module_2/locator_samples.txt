@@ -1,0 +1,5 @@
+#firstname
+//input[@name='lastname']
+input.email-field
+//input[@data-importance=0]
+//input[contains(@class, 'address-field')]
