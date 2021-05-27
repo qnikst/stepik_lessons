@@ -23,7 +23,7 @@ def test_successful_user_registration():
   confirmation_password_locator = "#id_registration-password2"
   register_button_locator = "button[name='registration_submit']"
   logout_icon_locator = "ul.nav.navbar-nav.navbar-right a i.icon-signout"
-  profile_icon_locator = "ul.nav.navbar-nav.navbar-right a i.icon-user1"
+  profile_icon_locator = "ul.nav.navbar-nav.navbar-right a i.icon-user"
 
   ok_icon_locator = ".alert.alert-success i.icon-ok-sign"
   email = generate_unique_email()
@@ -50,17 +50,12 @@ def test_successful_user_registration():
      email_input.send_keys(email)
      pass_input.send_keys(ideal_password)
      confirm_input.send_keys(ideal_password)
-     print(submit_btn)
      submit_btn.click()
      
      # Assert
 
-     # XXX: Хорошо-ли, что мы не используем assert здесь? В принцпе функция выбросит
-     # исключение, если элемент не появится. Можно ещё проверять по тексту, но тогда
-     # тест будет зависеть от локали.
      WebDriverWait(browser, allowed_timeout_seconds).until(
           EC.presence_of_element_located((By.CSS_SELECTOR, ok_icon_locator)))
-     # Ну ладно, добавим пару ассертов..
      logout_links = browser.find_elements_by_css_selector(logout_icon_locator)
      logout_links_count = len(logout_links)
      assert logout_links_count == 1, f"There should be a single logout link on the page, got {logout_links_count}"
