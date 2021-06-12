@@ -20,7 +20,9 @@ class TestProductPage:
     #    product_page.check_basket_cost(cost+10)
 
     @pytest.mark.parametrize('promo_offer', 
-        ["offer0","offer1","offer2","offer3","offer4","offer5","offer6","offer7","offer8","offer9"])
+        ["offer0","offer1","offer2","offer3","offer4","offer5","offer6",
+          pytest.param("offer7",marks=pytest.mark.xfail),
+         "offer8","offer9"])
     def test_guest_can_add_product_to_basket(self, browser, promo_offer):
         product_page = ProductPage(browser, link + "/?promo=" + promo_offer)
         product_page.open()
