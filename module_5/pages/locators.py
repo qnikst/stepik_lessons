@@ -25,6 +25,8 @@ class ProductPageLocators():
     PRODUCT_TITLE = (By.CSS_SELECTOR, "article.product_page div.product_main h1")
     PRODUCT_PRICE = (By.CSS_SELECTOR, "article.product_page div.product_main p.price_color")
     ADD_TO_BASKET = (By.CSS_SELECTOR, "#add_to_basket_form button.btn-add-to-basket")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages .alert-success")
     URGENT_SUCCESS_MESSAGES = (By.CSS_SELECTOR, "#messages .alert-success div.alertinner strong")
     URGENT_INFO_MESSAGES = (By.CSS_SELECTOR, "#messages .alert-info div.alertinner strong")
     BASKET_MINI = (By.CSS_SELECTOR, "div.basket-mini")
+    LOADER = (By.CSS_SELECTOR, "#loader")
