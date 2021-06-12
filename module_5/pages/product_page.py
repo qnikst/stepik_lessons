@@ -32,7 +32,7 @@ class ProductPage(BasePage):
         """ Проверяет наличие уведомления о том, что продукт добавлен в корзину,
         параметром принимает ожидаемое название продукта
         """
-        assert self.is_text_present_at(ProductPageLocators.URGENT_SUCCESS_MESSAGES, name), \
+        assert self.is_text_present_at(ProductPageLocators.URGENT_SUCCESS_MESSAGES, f"^{name}$"), \
           f"Отсутсвует подтверждение добавления в корзину, содержащее название продукта ({name})"
 
     def check_basket_cost(self, expected_cost):

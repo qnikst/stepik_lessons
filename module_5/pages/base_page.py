@@ -2,6 +2,7 @@
 Модуль вводит класс BasePage
 """
 import math
+import re
 
 from selenium.common.exceptions \
     import NoSuchElementException, NoAlertPresentException, TimeoutException
@@ -56,7 +57,7 @@ class BasePage():
         """
         try:
             WebDriverWait(self.browser, explicit_timeout).until(
-                EC.text_to_be_present_in_element(where, what))
+                wait_for_text_to_match(where, what))
         except TimeoutException:
             return False
         return True
@@ -78,3 +79,19 @@ class BasePage():
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
+
+
+class wait_for_text_to_match(object):
+    """
+    Expected condition проверяющая, что найденный текст соотвествует паттерну
+    """
+    def __init__(self, locator, pattern):
+        self.locator = locator
+        self.pattern = re.compile(pattern)
+
+    def __call__(self, driver):
+        try:
+            element_text = EC._find_element(driver, self.locator).text
+            return self.pattern.search(element_text)
+        except StaleElementReferenceException:
+            return False
