@@ -1,5 +1,10 @@
+import datetime
+
 from .base_page import BasePage
 from .locators import LoginPageLocators
+
+
+ideal_password = "qazwsx+123456"
 
 class LoginPage(BasePage):
 
@@ -19,3 +24,17 @@ class LoginPage(BasePage):
 
     def should_be_register_form(self):
         assert self.is_element_present(*LoginPageLocators.REGISTER_FORM), "Register form is not presented on page"
+
+    def generate_unique_email(self):
+        uniq = int(datetime.datetime.now().timestamp())
+        return "alexander.vershilov+" + str(uniq) + "@gmail.com"
+
+    def register_new_user(self, email, password):
+        email_input = self.browser.find_element(*LoginPageLocators.REGISTER_EMAIL)
+        pass_input = self.browser.find_element(*LoginPageLocators.REGISTER_PASSWORD)
+        confirm_input = self.browser.find_element(*LoginPageLocators.CONFIRM_PASSWORD)
+        submit_btn = self.browser.find_element(*LoginPageLocators.REGISTER_BUTTON)
+        email_input.send_keys(email)
+        pass_input.send_keys(password)
+        confirm_input.send_keys(password)
+        submit_btn.click()

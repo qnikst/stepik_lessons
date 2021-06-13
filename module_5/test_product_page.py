@@ -61,3 +61,29 @@ class TestProductPage:
         basket_page = BasketPage(browser, browser.current_url)
         basket_page.should_be_basket_page()
         basket_page.should_be_empty()
+
+@pytest.mark.user
+class TestUserAddToBasketFromProductPage:
+
+    @pytest.fixture(scope="function", autouse=True)
+    def setup(self, browser):
+        product_page = ProductPage(browser, link)
+        product_page.open()
+        product_page.go_to_login_page()
+        login_page = LoginPage(browser, browser.current_url)
+        email = login_page.generate_unique_email()
+        login_page.register_new_user(email, "qazwsx3edcrfv")
+        login_page.should_be_authorized_user()
+
+    def test_user_cant_see_success_message(self, browser):
+        product_page = ProductPage(browser, link)
+        product_page.open()
+        product_page.should_not_see_success_message()
+
+    def test_user_can_add_product_to_basket(self, browser):
+        product_page = ProductPage(browser, link + "/?promo=offer0")
+        product_page.open()
+        (name, cost) = product_page.add_to_basket()
+        product_page.solve_quiz_and_get_code()
+        product_page.check_product_to_basket_confirmed(name)
+        product_page.check_basket_cost(cost)
