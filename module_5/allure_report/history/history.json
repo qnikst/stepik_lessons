@@ -1,0 +1,347 @@
+{
+  "921f2bd7f1d917f20893b7cc702e48d9" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "6caac23558db0882",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617050522,
+        "stop" : 1623617054659,
+        "duration" : 4137
+      }
+    } ]
+  },
+  "14864204c6af13ad92397c5881274ddb" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "efa4532c37c326d1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617089402,
+        "stop" : 1623617093727,
+        "duration" : 4325
+      }
+    } ]
+  },
+  "f839820fadcc5418eef5369a1303f3f4" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "68e5135919c78336",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617188746,
+        "stop" : 1623617205089,
+        "duration" : 16343
+      }
+    } ]
+  },
+  "a3402cd0193d118811489f9e4e49510a" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "3286651a82fac6c0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617037146,
+        "stop" : 1623617040985,
+        "duration" : 3839
+      }
+    } ]
+  },
+  "d82cef5e544e3ee82e5c0aed86f4b7d4" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "13eeecb0646c3c11",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617056871,
+        "stop" : 1623617061591,
+        "duration" : 4720
+      }
+    } ]
+  },
+  "4207297b40eddb8cf30f4597605a2476" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "59b8ea6bb0b3586f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617043224,
+        "stop" : 1623617048324,
+        "duration" : 5100
+      }
+    } ]
+  },
+  "9172ddc0d6b907a80ba7befefcba349e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "a6773aa9d5a342eb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617218054,
+        "stop" : 1623617221719,
+        "duration" : 3665
+      }
+    } ]
+  },
+  "00be33377795fb724b903c2887a23a71" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "f78ddc804cf8c1f6",
+      "status" : "skipped",
+      "statusDetails" : "XFAIL\n\nAssertionError: Success message is presented, but should not be",
+      "time" : {
+        "start" : 1623617125932,
+        "stop" : 1623617133369,
+        "duration" : 7437
+      }
+    } ]
+  },
+  "7bf3fbad3a4b8be6365e907e1b88d850" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7614cccfafb2a9ea",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617016031,
+        "stop" : 1623617019925,
+        "duration" : 3894
+      }
+    } ]
+  },
+  "ba6b4590dd2e82757be5a31d3190ef16" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "bbb8307dfa94a0ab",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617022089,
+        "stop" : 1623617034958,
+        "duration" : 12869
+      }
+    } ]
+  },
+  "fb7b85784b9543172a657c126c418389" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "5c6dfaa79649044",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617095939,
+        "stop" : 1623617100820,
+        "duration" : 4881
+      }
+    } ]
+  },
+  "f05c655882ae6c419407270eda1f100b" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "6721a4f4414237ad",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617011598,
+        "stop" : 1623617013752,
+        "duration" : 2154
+      }
+    } ]
+  },
+  "207f3e681c61281b70a910743494f82c" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "54632c891dc96076",
+      "status" : "skipped",
+      "statusDetails" : "XFAIL\n\nAssertionError: Success message is presented, but should not be",
+      "time" : {
+        "start" : 1623617103065,
+        "stop" : 1623617108088,
+        "duration" : 5023
+      }
+    } ]
+  },
+  "7791d24ff79aa305ee95ecc9e5d47c89" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "32f3a441f5663c42",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617110325,
+        "stop" : 1623617123684,
+        "duration" : 13359
+      }
+    } ]
+  },
+  "0db81c6d2d83e95f319e8ea8e0d30bbb" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "876c44cba422ceb2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617063833,
+        "stop" : 1623617067927,
+        "duration" : 4094
+      }
+    } ]
+  },
+  "d3cc28bccdbaec18bcfd7b1ef0637fa8" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "55c866b169cfb079",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617005587,
+        "stop" : 1623617009407,
+        "duration" : 3820
+      }
+    } ]
+  },
+  "d15becef0f12dc94dbe249b17bd5b191" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b1dc1b4cecdbee92",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617135585,
+        "stop" : 1623617172121,
+        "duration" : 36536
+      }
+    } ]
+  },
+  "87c815e2ff57b386ed8170cc72071f13" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "d79c7557de8d8119",
+      "status" : "skipped",
+      "statusDetails" : "XFAIL\n\nAssertionError: Отсутсвует подтверждение добавления в корзину, содержащее название продукта (Coders at Work)",
+      "time" : {
+        "start" : 1623617070148,
+        "stop" : 1623617087121,
+        "duration" : 16973
+      }
+    } ]
+  }
+}

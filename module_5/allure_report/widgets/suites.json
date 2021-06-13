@@ -1,0 +1,15 @@
+{
+  "total" : 1,
+  "items" : [ {
+    "uid" : "2ac69296d25a79e4a24517462ae8926f",
+    "name" : "test_product_page",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 3,
+      "passed" : 15,
+      "unknown" : 0,
+      "total" : 18
+    }
+  } ]
+}

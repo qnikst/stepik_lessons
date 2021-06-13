@@ -1,0 +1,109 @@
+{
+  "uid" : "d79c7557de8d8119",
+  "name" : "test_guest_can_add_product_to_basket[offer7]",
+  "fullName" : "test_product_page.TestProductPage#test_guest_can_add_product_to_basket",
+  "historyId" : "87c815e2ff57b386ed8170cc72071f13",
+  "time" : {
+    "start" : 1623617070148,
+    "stop" : 1623617087121,
+    "duration" : 16973
+  },
+  "status" : "skipped",
+  "statusMessage" : "XFAIL\n\nAssertionError: Отсутсвует подтверждение добавления в корзину, содержащее название продукта (Coders at Work)",
+  "statusTrace" : "self = <module_5.test_product_page.TestProductPage object at 0x1086d5a00>\nbrowser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"38b4fe16d9ea11c95579be1974874756\")>\npromo_offer = 'offer7'\n\n    @pytest.mark.parametrize('promo_offer',\n        [\"offer0\",\"offer1\",\"offer2\",\"offer3\",\"offer4\",\"offer5\",\"offer6\",\n          pytest.param(\"offer7\",marks=pytest.mark.xfail),\n         \"offer8\",\"offer9\"])\n    def test_guest_can_add_product_to_basket(self, browser, promo_offer):\n        product_page = ProductPage(browser, link + \"/?promo=\" + promo_offer)\n        product_page.open()\n        (name, cost) = product_page.add_to_basket()\n        product_page.solve_quiz_and_get_code()\n>       product_page.check_product_to_basket_confirmed(name)\n\ntest_product_page.py:35: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <module_5.pages.product_page.ProductPage object at 0x1086b2f40>, name = 'Coders at Work'\n\n    def check_product_to_basket_confirmed(self, name):\n        \"\"\" Проверяет наличие уведомления о том, что продукт добавлен в корзину,\n        параметром принимает ожидаемое название продукта\n        \"\"\"\n>       assert self.is_text_present_at(ProductPageLocators.URGENT_SUCCESS_MESSAGES, f\"^{name}$\"), \\\n          f\"Отсутсвует подтверждение добавления в корзину, содержащее название продукта ({name})\"\nE       AssertionError: Отсутсвует подтверждение добавления в корзину, содержащее название продукта (Coders at Work)\n\npages/product_page.py:35: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "browser",
+    "time" : {
+      "start" : 1623617068003,
+      "stop" : 1623617070124,
+      "duration" : 2121
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "skipped",
+    "statusMessage" : "XFAIL\n\nAssertionError: Отсутсвует подтверждение добавления в корзину, содержащее название продукта (Coders at Work)",
+    "statusTrace" : "self = <module_5.test_product_page.TestProductPage object at 0x1086d5a00>\nbrowser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"38b4fe16d9ea11c95579be1974874756\")>\npromo_offer = 'offer7'\n\n    @pytest.mark.parametrize('promo_offer',\n        [\"offer0\",\"offer1\",\"offer2\",\"offer3\",\"offer4\",\"offer5\",\"offer6\",\n          pytest.param(\"offer7\",marks=pytest.mark.xfail),\n         \"offer8\",\"offer9\"])\n    def test_guest_can_add_product_to_basket(self, browser, promo_offer):\n        product_page = ProductPage(browser, link + \"/?promo=\" + promo_offer)\n        product_page.open()\n        (name, cost) = product_page.add_to_basket()\n        product_page.solve_quiz_and_get_code()\n>       product_page.check_product_to_basket_confirmed(name)\n\ntest_product_page.py:35: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <module_5.pages.product_page.ProductPage object at 0x1086b2f40>, name = 'Coders at Work'\n\n    def check_product_to_basket_confirmed(self, name):\n        \"\"\" Проверяет наличие уведомления о том, что продукт добавлен в корзину,\n        параметром принимает ожидаемое название продукта\n        \"\"\"\n>       assert self.is_text_present_at(ProductPageLocators.URGENT_SUCCESS_MESSAGES, f\"^{name}$\"), \\\n          f\"Отсутсвует подтверждение добавления в корзину, содержащее название продукта ({name})\"\nE       AssertionError: Отсутсвует подтверждение добавления в корзину, содержащее название продукта (Coders at Work)\n\npages/product_page.py:35: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "c09c2810e3cdaa2c",
+      "name" : "stdout",
+      "source" : "c09c2810e3cdaa2c.txt",
+      "type" : "text/plain",
+      "size" : 75
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "browser::0",
+    "time" : {
+      "start" : 1623617087179,
+      "stop" : 1623617087250,
+      "duration" : 71
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.xfail"
+  }, {
+    "name" : "suite",
+    "value" : "test_product_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProductPage"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-Alexander-2.local"
+  }, {
+    "name" : "thread",
+    "value" : "36783-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_product_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "promo_offer",
+    "value" : "'offer7'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.xfail" ]
+  },
+  "source" : "d79c7557de8d8119.json",
+  "parameterValues" : [ "'offer7'" ]
+}

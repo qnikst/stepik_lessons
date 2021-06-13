@@ -1,0 +1,243 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "test_product_page",
+    "children" : [ {
+      "name" : "test_guest_can_go_to_login_page",
+      "uid" : "55c866b169cfb079",
+      "parentUid" : "bed6937643fb20c64f8657aad9485f4c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617005587,
+        "stop" : 1623617009407,
+        "duration" : 3820
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_guest_should_see_login_link_on_product_page",
+      "uid" : "6721a4f4414237ad",
+      "parentUid" : "bed6937643fb20c64f8657aad9485f4c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617011598,
+        "stop" : 1623617013752,
+        "duration" : 2154
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_guest_can_add_product_to_basket[offer0]",
+      "uid" : "7614cccfafb2a9ea",
+      "parentUid" : "bed6937643fb20c64f8657aad9485f4c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617016031,
+        "stop" : 1623617019925,
+        "duration" : 3894
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'offer0'" ]
+    }, {
+      "name" : "test_guest_can_add_product_to_basket[offer1]",
+      "uid" : "bbb8307dfa94a0ab",
+      "parentUid" : "bed6937643fb20c64f8657aad9485f4c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617022089,
+        "stop" : 1623617034958,
+        "duration" : 12869
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'offer1'" ]
+    }, {
+      "name" : "test_guest_can_add_product_to_basket[offer2]",
+      "uid" : "3286651a82fac6c0",
+      "parentUid" : "bed6937643fb20c64f8657aad9485f4c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617037146,
+        "stop" : 1623617040985,
+        "duration" : 3839
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'offer2'" ]
+    }, {
+      "name" : "test_guest_can_add_product_to_basket[offer3]",
+      "uid" : "59b8ea6bb0b3586f",
+      "parentUid" : "bed6937643fb20c64f8657aad9485f4c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617043224,
+        "stop" : 1623617048324,
+        "duration" : 5100
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'offer3'" ]
+    }, {
+      "name" : "test_guest_can_add_product_to_basket[offer4]",
+      "uid" : "6caac23558db0882",
+      "parentUid" : "bed6937643fb20c64f8657aad9485f4c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617050522,
+        "stop" : 1623617054659,
+        "duration" : 4137
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'offer4'" ]
+    }, {
+      "name" : "test_guest_can_add_product_to_basket[offer5]",
+      "uid" : "13eeecb0646c3c11",
+      "parentUid" : "bed6937643fb20c64f8657aad9485f4c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617056871,
+        "stop" : 1623617061591,
+        "duration" : 4720
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'offer5'" ]
+    }, {
+      "name" : "test_guest_can_add_product_to_basket[offer6]",
+      "uid" : "876c44cba422ceb2",
+      "parentUid" : "bed6937643fb20c64f8657aad9485f4c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617063833,
+        "stop" : 1623617067927,
+        "duration" : 4094
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'offer6'" ]
+    }, {
+      "name" : "test_guest_can_add_product_to_basket[offer7]",
+      "uid" : "d79c7557de8d8119",
+      "parentUid" : "bed6937643fb20c64f8657aad9485f4c",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1623617070148,
+        "stop" : 1623617087121,
+        "duration" : 16973
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'offer7'" ]
+    }, {
+      "name" : "test_guest_can_add_product_to_basket[offer8]",
+      "uid" : "efa4532c37c326d1",
+      "parentUid" : "bed6937643fb20c64f8657aad9485f4c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617089402,
+        "stop" : 1623617093727,
+        "duration" : 4325
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'offer8'" ]
+    }, {
+      "name" : "test_guest_can_add_product_to_basket[offer9]",
+      "uid" : "5c6dfaa79649044",
+      "parentUid" : "bed6937643fb20c64f8657aad9485f4c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617095939,
+        "stop" : 1623617100820,
+        "duration" : 4881
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'offer9'" ]
+    }, {
+      "name" : "test_guest_cant_see_success_message_after_adding_product_to_basket",
+      "uid" : "54632c891dc96076",
+      "parentUid" : "bed6937643fb20c64f8657aad9485f4c",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1623617103065,
+        "stop" : 1623617108088,
+        "duration" : 5023
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_guest_cant_see_success_message",
+      "uid" : "32f3a441f5663c42",
+      "parentUid" : "bed6937643fb20c64f8657aad9485f4c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617110325,
+        "stop" : 1623617123684,
+        "duration" : 13359
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_message_disappeared_after_adding_product_to_basket",
+      "uid" : "f78ddc804cf8c1f6",
+      "parentUid" : "bed6937643fb20c64f8657aad9485f4c",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1623617125932,
+        "stop" : 1623617133369,
+        "duration" : 7437
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_guest_cant_see_product_in_basket_opened_from_product_page",
+      "uid" : "b1dc1b4cecdbee92",
+      "parentUid" : "bed6937643fb20c64f8657aad9485f4c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617135585,
+        "stop" : 1623617172121,
+        "duration" : 36536
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_user_cant_see_success_message",
+      "uid" : "68e5135919c78336",
+      "parentUid" : "bed6937643fb20c64f8657aad9485f4c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617188746,
+        "stop" : 1623617205089,
+        "duration" : 16343
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_user_can_add_product_to_basket",
+      "uid" : "a6773aa9d5a342eb",
+      "parentUid" : "bed6937643fb20c64f8657aad9485f4c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623617218054,
+        "stop" : 1623617221719,
+        "duration" : 3665
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "bed6937643fb20c64f8657aad9485f4c"
+  } ]
+}
