@@ -1,11 +1,20 @@
+"""
+Тесты страницы логина
+"""
 from .pages.login_page import LoginPage
 
-link = "http://selenium1py.pythonanywhere.com/en-gb/accounts/login/"
+LINK = "http://selenium1py.pythonanywhere.com/en-gb/accounts/login/"
 
 class TestLoginPage:
+    """
+    Тесты страницы логина
+    """
 
-    class TestMainPage:
-        def test_guest_can_go_to_login_page(self, browser):
-            page = LoginPage(browser, link)
-            page.open()
-            page.should_be_login_page()
+    def test_guest_can_go_to_login_page(self, browser):
+        """
+        Тест проверяющий, что страница логина действитейльно таковой
+        и является
+        """
+        page = LoginPage(browser, LINK)
+        page.open()
+        page.should_be_login_page()

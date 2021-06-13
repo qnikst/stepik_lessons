@@ -61,9 +61,15 @@ class ProductPage(BasePage):
         #         f"Неожиданная стоимость корзины {cost}, ожидается {expected_cost}"
 
     def should_not_see_success_message(self):
+        """
+        Пользователь не должен видеть сообщения об успехе операции
+        """
         assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
           "Success message is presented, but should not be"
 
     def should_success_message_dissapear(self):
+        """
+        Сообщение об успехе операции должно исчезнуть
+        """
         assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
           "Success message is presented, but should not be"

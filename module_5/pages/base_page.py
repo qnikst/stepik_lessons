@@ -30,10 +30,26 @@ class BasePage():
         self.browser.get(self.url)
 
     def go_to_login_page(self):
+        """
+        Перейти на страницу логина
+
+        @example
+
+            page.go_to_login_page()
+            login_page = LoginPage(browser, browser.current_url)
+        """
         login_link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         login_link.click()
 
     def go_to_basket_page(self):
+        """
+        Перейти на страницу корзины
+
+        @example
+
+            page.go_to_basket_page()
+            basket_page = BasketPage(browser, browser.current_url)
+        """
         basket_link = self.browser.find_element(*BasePageLocators.BASKET_LINK)
         basket_link.click()
 
@@ -87,7 +103,7 @@ class BasePage():
             WebDriverWait(self.browser, timeout).until(EC.presence_of_element_located((how, what)))
         except TimeoutException:
             return True
-    
+
         return False
 
     def is_disappeared(self, how, what, timeout=4):
@@ -99,14 +115,22 @@ class BasePage():
                 until_not(EC.presence_of_element_located((how, what)))
         except TimeoutException:
             return False
-    
+
         return True
 
     def should_be_authorized_user(self):
+        """
+        Проверяет, что пользователь авторизован. В случае провала
+        выбрасывает AssertionErrror
+        """
         assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
             " probably unauthorised user"
 
     def should_be_login_link(self):
+        """
+        Проверяет, что на странице доступна ссылка на страницу логина.
+        В случае провала выбрасывает исключение
+        """
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
 
     def solve_quiz_and_get_code(self):
@@ -127,7 +151,7 @@ class BasePage():
         except NoAlertPresentException:
             print("No second alert presented")
 
-class wait_for_text_to_match(object):
+class wait_for_text_to_match:
     """
     Expected condition проверяющая, что найденный текст соотвествует паттерну
     """
