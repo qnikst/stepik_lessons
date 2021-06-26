@@ -6,6 +6,7 @@ import datetime
 from .base_page import BasePage
 from .locators import LoginPageLocators
 
+
 class LoginPage(BasePage):
     """
     PageObject для страницы логина

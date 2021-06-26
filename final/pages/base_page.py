@@ -6,11 +6,12 @@ import re
 
 from selenium.common.exceptions \
     import NoSuchElementException, NoAlertPresentException, TimeoutException, \
-        StaleElementReferenceException
+    StaleElementReferenceException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from .locators import BasePageLocators
+
 
 class BasePage():
     """
@@ -111,7 +112,7 @@ class BasePage():
         Проверяет, что элемент исчезает со страницы за указанное время.
         """
         try:
-            WebDriverWait(self.browser, timeout, 1, TimeoutException).\
+            WebDriverWait(self.browser, timeout, 1, TimeoutException). \
                 until_not(EC.presence_of_element_located((how, what)))
         except TimeoutException:
             return False
@@ -124,7 +125,7 @@ class BasePage():
         выбрасывает AssertionErrror
         """
         assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
-            " probably unauthorised user"
+                                                                     " probably unauthorised user"
 
     def should_be_login_link(self):
         """
@@ -151,10 +152,12 @@ class BasePage():
         except NoAlertPresentException:
             print("No second alert presented")
 
+
 class wait_for_text_to_match:
     """
     Expected condition проверяющая, что найденный текст соотвествует паттерну
     """
+
     def __init__(self, locator, pattern):
         self.locator = locator
         self.pattern = re.compile(pattern)

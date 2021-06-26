@@ -6,6 +6,7 @@ import re
 from .base_page import BasePage
 from .locators import ProductPageLocators
 
+
 class ProductPage(BasePage):
     """
     PageObject класс для страницы продукта
@@ -33,7 +34,7 @@ class ProductPage(BasePage):
         параметром принимает ожидаемое название продукта
         """
         assert self.is_text_present_at(ProductPageLocators.URGENT_SUCCESS_MESSAGES, f"^{name}$"), \
-          f"Отсутсвует подтверждение добавления в корзину, содержащее название продукта ({name})"
+            f"Отсутсвует подтверждение добавления в корзину, содержащее название продукта ({name})"
 
     def check_basket_cost(self, expected_cost):
         """ Проверяет, что стоимость корзины соответствует ожиданию
@@ -65,11 +66,11 @@ class ProductPage(BasePage):
         Пользователь не должен видеть сообщения об успехе операции
         """
         assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
-          "Success message is presented, but should not be"
+            "Success message is presented, but should not be"
 
     def should_success_message_dissapear(self):
         """
         Сообщение об успехе операции должно исчезнуть
         """
         assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
-          "Success message is presented, but should not be"
+            "Success message is presented, but should not be"

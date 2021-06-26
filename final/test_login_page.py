@@ -5,6 +5,7 @@ from .pages.login_page import LoginPage
 
 LINK = "http://selenium1py.pythonanywhere.com/en-gb/accounts/login/"
 
+
 class TestLoginPage:
     """
     Тесты страницы логина

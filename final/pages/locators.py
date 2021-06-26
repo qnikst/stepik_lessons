@@ -5,6 +5,7 @@
 # pylint очень огорчается
 from selenium.webdriver.common.by import By
 
+
 class BasePageLocators():
     """
     Локаторы для всех страниц
@@ -14,11 +15,13 @@ class BasePageLocators():
     BASKET_LINK = (By.CSS_SELECTOR, "div.basket-mini span.btn-group a.btn-default")
     USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
+
 class MainPageLocators():
     """
     Локаторы главной сраницы
     """
     pass
+
 
 class LoginPageLocators():
     """
@@ -30,6 +33,7 @@ class LoginPageLocators():
     REGISTER_PASSWORD = (By.CSS_SELECTOR, "#id_registration-password1")
     CONFIRM_PASSWORD = (By.CSS_SELECTOR, "#id_registration-password2")
     REGISTER_BUTTON = (By.CSS_SELECTOR, "button[name='registration_submit']")
+
 
 class ProductPageLocators():
     """
@@ -44,10 +48,10 @@ class ProductPageLocators():
     BASKET_MINI = (By.CSS_SELECTOR, "div.basket-mini")
     LOADER = (By.CSS_SELECTOR, "#loader")
 
+
 class BasketPageLocators():
     """
     Локаторы для корзины
     """
     CONTENT = (By.CSS_SELECTOR, "#content_inner")
     BASKET_ITEMS = (By.CSS_SELECTOR, "div.basket-items")
-

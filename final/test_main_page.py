@@ -9,6 +9,7 @@ from .pages.login_page import LoginPage
 
 LINK = "http://selenium1py.pythonanywhere.com/"
 
+
 class TestMainPage:
     """
     Тесты главной страницы
@@ -24,6 +25,7 @@ class TestMainPage:
         basket_page = BasketPage(browser, browser.current_url)
         basket_page.should_be_basket_page()
         basket_page.should_be_empty()
+
 
 @pytest.mark.login_guest
 class TestLoginFromMainPage():

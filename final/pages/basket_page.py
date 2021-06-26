@@ -4,6 +4,7 @@
 from .base_page import BasePage
 from .locators import BasketPageLocators
 
+
 class BasketPage(BasePage):
     """
     PageObject класс для страницы корзины
@@ -22,6 +23,6 @@ class BasketPage(BasePage):
         Проверка на то, что корзина пуста
         """
         assert self.is_not_element_present(*BasketPageLocators.BASKET_ITEMS), \
-          "В корзине уже есть продукты, хотя это не ожидается"
+            "В корзине уже есть продукты, хотя это не ожидается"
         assert self.is_text_present_at(BasketPageLocators.CONTENT, "Your basket is empty"), \
-          "Отсутсвует сообщение о том, что корзина пуста"
+            "Отсутсвует сообщение о том, что корзина пуста"
