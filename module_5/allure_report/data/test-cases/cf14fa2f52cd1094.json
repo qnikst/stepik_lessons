@@ -1,0 +1,106 @@
+{
+  "uid" : "cf14fa2f52cd1094",
+  "name" : "test_message_disappeared_after_adding_product_to_basket",
+  "fullName" : "test_product_page.TestProductPage#test_message_disappeared_after_adding_product_to_basket",
+  "historyId" : "00be33377795fb724b903c2887a23a71",
+  "time" : {
+    "start" : 1623617125932,
+    "stop" : 1623617133369,
+    "duration" : 7437
+  },
+  "status" : "skipped",
+  "statusMessage" : "XFAIL\n\nAssertionError: Success message is presented, but should not be",
+  "statusTrace" : "self = <module_5.test_product_page.TestProductPage object at 0x107ecb220>\nbrowser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"dd1487f74ee9378738302dc8d4587f29\")>\n\n    @pytest.mark.xfail\n    def test_message_disappeared_after_adding_product_to_basket(self, browser):\n        product_page = ProductPage(browser, link)\n        product_page.open()\n        product_page.add_to_basket()\n>       product_page.should_success_message_dissapear()\n\ntest_product_page.py:55: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <module_5.pages.product_page.ProductPage object at 0x1086c0130>\n\n    def should_success_message_dissapear(self):\n>       assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \\\n          \"Success message is presented, but should not be\"\nE       AssertionError: Success message is presented, but should not be\n\npages/product_page.py:68: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "browser",
+    "time" : {
+      "start" : 1623617123757,
+      "stop" : 1623617125918,
+      "duration" : 2161
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "skipped",
+    "statusMessage" : "XFAIL\n\nAssertionError: Success message is presented, but should not be",
+    "statusTrace" : "self = <module_5.test_product_page.TestProductPage object at 0x107ecb220>\nbrowser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"dd1487f74ee9378738302dc8d4587f29\")>\n\n    @pytest.mark.xfail\n    def test_message_disappeared_after_adding_product_to_basket(self, browser):\n        product_page = ProductPage(browser, link)\n        product_page.open()\n        product_page.add_to_basket()\n>       product_page.should_success_message_dissapear()\n\ntest_product_page.py:55: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <module_5.pages.product_page.ProductPage object at 0x1086c0130>\n\n    def should_success_message_dissapear(self):\n>       assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \\\n          \"Success message is presented, but should not be\"\nE       AssertionError: Success message is presented, but should not be\n\npages/product_page.py:68: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "6f67e3f4807d3275",
+      "name" : "stdout",
+      "source" : "6f67e3f4807d3275.txt",
+      "type" : "text/plain",
+      "size" : 49
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true,
+    "stepsCount" : 0
+  },
+  "afterStages" : [ {
+    "name" : "browser::0",
+    "time" : {
+      "start" : 1623617133376,
+      "stop" : 1623617133451,
+      "duration" : 75
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.xfail"
+  }, {
+    "name" : "suite",
+    "value" : "test_product_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProductPage"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-Alexander-2.local"
+  }, {
+    "name" : "thread",
+    "value" : "36783-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_product_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.xfail" ]
+  },
+  "source" : "cf14fa2f52cd1094.json",
+  "parameterValues" : [ ]
+}
