@@ -4,31 +4,14 @@
 import allure
 import pytest
 
+from .pages.basket_page import BasketPage
+from .pages.catalogue_page import CataloguePage
+
 @allure.epic("Работа корзины")
 class TestBasketPage:
     """
     Тесты управления состоянием корзины
     """
-
-    @pytest.mark.personal
-    @allure.feature("Управление товаром в корзине")
-    @allure.story("Работа слайдера")
-    @allure.title("Пользователь может увеличить кол-во товара кнопкой на слайдере")
-    def test_increase_amount_slider(self):
-        """
-        Проверяем, что мы можем увеличить количество заказанного товара слайдером
-        """
-        pytest.skip("not yet implemented")
-
-    @pytest.mark.personal
-    @allure.feature("Управление товаром в корзине")
-    @allure.story("Работа слайдера")
-    @allure.title("Пользователь может уменьшить кол-во товара кнопкой на слайдере")
-    def test_descrease_amount_slider(self):
-        """
-        Проверяем, что мы можем уменьшить количество заказанного товара слайдером
-        """
-        pytest.skip("not yet implemented")
 
     @pytest.mark.parametrize('count', ["0", "1", "42"])
     @pytest.mark.personal
