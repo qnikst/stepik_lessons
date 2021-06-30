@@ -17,8 +17,8 @@ def find_price_at(where: WebElement, what: Locator):
     десятичных знаков и отсутствует разделитель разрядов
 
     :param where: Объект, в контексте которого мы ищем цену
-    :param what:
-    :return:
+    :param what: Локатор элемента, в котором хранится цена
+    :return: float цену товара
     """
     price_text = where.find_element(*what).text
     search_result = re.search(r"\d+.?\d*", price_text)
