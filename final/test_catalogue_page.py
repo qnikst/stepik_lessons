@@ -23,8 +23,8 @@ class TestCataloguePage:
     @pytest.mark.personal
     def test_add_to_basket(self, browser):
         """
-        Тест проверяет, что пользователь может добавить продукт
-        со страницы, которую видит.
+        Тест проверяет, что при добавлении пользователем товара в корзину
+        будет отображено сообщение об успехе добавления
         """
         # Arrange
         page = CataloguePage(browser, LINK)

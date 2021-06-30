@@ -1,6 +1,7 @@
 """
 Тесты каталога
 """
+import allure
 import random
 from selenium.webdriver.remote.webelement import WebElement
 
@@ -61,6 +62,10 @@ class Product:
         Добавить выбранный товар в корзину
         :return:
         """
+        self.__add_to_basket_step(self.title)
+
+    @allure.step("Добавляем товар ({title}) в корзину")
+    def __add_to_basket_step(self, title):
         submit_button = self.__element.find_element(*CataloguePageLocators.SUBMIT_BUTTON)
         submit_button.click()
 
@@ -73,6 +78,7 @@ class CataloguePage(BasePage):
     PageObject модель для страницы каталога
     """
 
+    @allure.step("Загружаем список продуктов")
     def load_products(self) -> ProductList:
         """
         Загрузить список продуктов находящихся на странице
@@ -80,6 +86,7 @@ class CataloguePage(BasePage):
         """
         return [Product(x) for x in self.browser.find_elements(*CataloguePageLocators.PRODUCT_ITEM)]
 
+    @allure.step("Добавляем в корзину случайный продукт")
     def add_random_product_to_basket(self) -> ProductData:
         """
         Добавить случайный продукт со страницы в корзину.

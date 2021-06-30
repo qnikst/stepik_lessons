@@ -22,12 +22,15 @@ class BasePage:
         self.url = url
         self.browser.implicitly_wait(timeout)
 
-    @allure.step("Открыть страницу")
     def open(self):
         """
         Открыть текущую страницу
         """
-        self.browser.get(self.url)
+        self.__open(self.url)
+
+    @allure.step("Переходим на страницу: {url}")
+    def __open(self, url):
+        self.browser.get(url)
 
     def is_element_present(self, how, what):
         """
@@ -75,6 +78,7 @@ class BasePage:
 
         return True
 
+    @allure.step("Проверяем, что текст {what} присутствует в {where}")
     def is_text_present_at(self, where, what, explicit_timeout=12):
         """
         Проверяет является ли текст подстрокой заданного элемента.
