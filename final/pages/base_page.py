@@ -1,6 +1,7 @@
 """
 Модуль вводит класс BasePage
 """
+import allure
 import math
 import re
 
@@ -30,6 +31,7 @@ class BasePage():
         """
         self.browser.get(self.url)
 
+    @allure.step("Переход на страницу логина")
     def go_to_login_page(self):
         """
         Перейти на страницу логина
@@ -42,6 +44,7 @@ class BasePage():
         login_link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         login_link.click()
 
+    @allure.step("Переход на страницу корзины")
     def go_to_basket_page(self):
         """
         Перейти на страницу корзины
