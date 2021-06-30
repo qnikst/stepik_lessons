@@ -96,3 +96,11 @@ class CataloguePage(BasePage):
         product = random.choice(products)
         product.add_to_basket()
         return product.data
+
+    @allure.step("Считываем стоимость корзины")
+    def read_basket_price(self) -> float:
+        """
+        Загрузить стоимость корзины отображаемую на странице
+        :return:
+        """
+        return find_price_at(self.browser, CataloguePageLocators.BASKET_MINI)

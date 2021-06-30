@@ -4,7 +4,6 @@
 import allure
 import pytest
 
-
 @allure.epic("Работа корзины")
 class TestBasketPage:
     """

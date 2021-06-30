@@ -19,4 +19,5 @@ class CataloguePageLocators:
     PRODUCT_TITLE = (By.CSS_SELECTOR, "h3 a")
     PRODUCT_PRICE = (By.CSS_SELECTOR, "div.product_price p.price_color")
     SUBMIT_BUTTON = (By.CSS_SELECTOR, "form button[type='submit']")
+    BASKET_MINI = (By.CSS_SELECTOR, "header div.basket-mini")
 
