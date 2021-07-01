@@ -6,6 +6,11 @@ import pytest
 
 from .pages.basket_page import BasketPage
 from .pages.catalogue_page import CataloguePage
+from .pages.locators import BasketPageLocators
+from .pages.i18n import BasketPageI18n
+
+CATALOGUE_LINK = "http://selenium1py.pythonanywhere.com/catalogue"
+LINK = "http://selenium1py.pythonanywhere.com/basket/"
 
 @allure.epic("Работа корзины")
 class TestBasketPage:
@@ -13,27 +18,57 @@ class TestBasketPage:
     Тесты управления состоянием корзины
     """
 
-    @pytest.mark.parametrize('count', ["0", "1", "42"])
-    @pytest.mark.personal
+    @pytest.mark.parametrize('qty', ["1", "2", "3"])
     @allure.feature("Управление товаром в корзине")
     @allure.story("Работа заказа товаров")
     @allure.title("Пользователь может изменить кол-во товара вводом в поле")
-    def test_change_amount(self, count):
+    @pytest.mark.personal_tests
+    def test_change_amount(self, browser, qty):
         """
         Проверяем, что мы можем изменить количество товара на другое значение
         """
-        pytest.skip("not yet implemented")
+        # Arrange
+        page = CataloguePage(browser, CATALOGUE_LINK)
+        page.open()
+        product = page.add_random_product_to_basket()
+        page = BasketPage(browser, LINK)
+        page.open()
+        row = page.load_rows()[0]
 
-    @pytest.mark.personal
+        # Act
+        row.set_quantity(int(qty))
+        row.update_quantity()
+
+        # Assert
+        row = page.load_rows()[0]
+        actual_price = row.read_total()
+        expected_price = product.price * int(qty)
+        assert actual_price == expected_price, \
+            f"Общая цена товара отличается от ожидаемой. Текущая цена товара {actual_price}, ожидается {qty}*{product.price} = ${expected_price}"
+
     @allure.feature("Управление товаром в корзине")
     @allure.story("Работа заказа товаров")
     @allure.title("Пользователь может удалить товар из корзины кнопкой")
-    def test_remove_product(self):
+    @pytest.mark.xfail
+    @pytest.mark.personal_tests
+    def test_remove_product(self, browser):
         """
         Проверяем, что мы можем удалить товар из корзины
         """
-        pytest.skip("not yet implemented")
+        # Arrange
+        page = CataloguePage(browser, CATALOGUE_LINK)
+        page.open()
+        product = page.add_random_product_to_basket()
+        page = BasketPage(browser, LINK)
+        page.open()
+        row = page.load_rows()[0]
 
+        # Act
+        row.delete()
+
+        # Assert
+        assert page.is_disappeared(*BasketPageLocators.ITEM_SUBMIT), \
+           "Товар должен был быть исчезнуть, а он остался"
 
 @allure.epic("Оформление заказа")
 class TestBasketCheckout:
@@ -41,22 +76,29 @@ class TestBasketCheckout:
     Тесты оформления заказа
     """
 
-    @pytest.mark.personal
-    @allure.feature("Заказ покупки")
-    @allure.story("Заказ от авторизованного пользователя")
-    @allure.title("Авторизованной пользователь может оформить заказ")
-    def test_checkout_basket(self):
-        """
-        Проверяем, что мы можем оформить заказ авторизованным пользователем
-        """
-        pytest.skip("not yet implemented")
-
-    @pytest.mark.personal
     @allure.feature("Заказ покупки")
     @allure.story("Заказ от анонимного пользователя")
     @allure.title("Анонимный пользователь может оформить заказ")
-    def test_checkout_as_guest(self):
+    @pytest.mark.xfail
+    @pytest.mark.personal_tests
+    def test_checkout_as_guest(self, browser):
         """
-        Проверяем, что мы можем оформить заказ неавторизованным пользователем
+        Проверяем, что мы можем оформить заказ неавторизованным пользователем,
+        мы проверяем, что пользователь, если хочет остаться анонимным,
+        заполнив форму окажется на странице заполнения адреса
         """
-        pytest.skip("not yet implemented")
+        # Arrange
+        page = CataloguePage(browser, CATALOGUE_LINK)
+        page.open()
+        page.add_random_product_to_basket()
+        page = BasketPage(browser, LINK)
+        page.open()
+        page.checkout()
+
+        # Act
+        page.fill_email('user@example.com')
+        page.continue_checkout()
+
+        # Assert
+        assert page.is_text_present_at(BasketPageLocators.PAGE_SUBHEADER, BasketPageI18n.shipping_address()), \
+           "Не произошёл переход на страницу заполнения адреса"

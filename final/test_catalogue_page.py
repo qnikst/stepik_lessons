@@ -4,6 +4,7 @@
 import allure
 import pytest
 import random
+import re
 
 from .pages.catalogue_page import CataloguePage
 from .pages.i18n import CataloguePageI18n
@@ -20,7 +21,7 @@ class TestCataloguePage:
 
     @allure.feature("Добавление в корзину")
     @allure.title("Отображается подтверждение при добавлении в продукта в корзину")
-    @pytest.mark.personal
+    @pytest.mark.personal_tests
     def test_add_to_basket_confirmed(self, browser):
         """
         Тест проверяет, что при добавлении пользователем товара в корзину
@@ -37,13 +38,16 @@ class TestCataloguePage:
         product.add_to_basket()
 
         # Assert
+
+        # it's a hack we need because some titles are shrank.
+        product_title = re.sub(r'\.\.\.$', '', product_title).strip()
         assert page.is_text_present_at(BasePageLocators.SUCCESS_MESSAGE,
                                        CataloguePageI18n.make_confirmation_text(product_title)), \
             f"Не появилось уведомление об успешном добавлении продукта {product_title}"
 
     @allure.feature("Добавление в корзину")
     @allure.title("Цена товаров находящихся в корзине меняется на цену товара")
-    @pytest.mark.personal
+    @pytest.mark.personal_tests
     def test_add_to_basket_updated_price(self, browser):
         """
         Тест проверяет, что при добавлении пользователем товара в корзину

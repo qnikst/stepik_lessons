@@ -13,3 +13,13 @@ class CataloguePageI18n:
         товара в корзину.
         """
         return f'{product_name} has been added to your basket'
+
+
+class BasketPageI18n:
+    """
+    Тексты на страницы корзины
+    """
+
+    @staticmethod
+    def shipping_address():
+        return "Shipping address"
