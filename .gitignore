@@ -1,0 +1,8 @@
+/stepik_lessons.iml
+allure_result
+allure_report
+/venv
+/.idea
+__pycache__
+geckodriver.log
+/my_allure_reports
