@@ -1,5 +1,0 @@
-
-start chrome browser for test..
-No second alert presented
-
-quit browser..
